@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3407D0562B7C8B9900E9FF63 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3407D0552B7C8B9900E9FF63 /* Alamofire */; };
 		3491BBA62B7BBA5E00FAC84D /* Sonchv2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491BBA52B7BBA5E00FAC84D /* Sonchv2App.swift */; };
 		3491BBA82B7BBA5E00FAC84D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491BBA72B7BBA5E00FAC84D /* ContentView.swift */; };
 		3491BBAA2B7BBA6000FAC84D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3491BBA92B7BBA6000FAC84D /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3491BBD22B7BBB4500FAC84D /* Inject in Frameworks */,
+				3407D0562B7C8B9900E9FF63 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +151,7 @@
 			name = Sonchv2;
 			packageProductDependencies = (
 				3491BBD12B7BBB4500FAC84D /* Inject */,
+				3407D0552B7C8B9900E9FF63 /* Alamofire */,
 			);
 			productName = Sonchv2;
 			productReference = 3491BBA22B7BBA5E00FAC84D /* Sonchv2.app */;
@@ -224,6 +227,7 @@
 			mainGroup = 3491BB992B7BBA5E00FAC84D;
 			packageReferences = (
 				3491BBD02B7BBB4400FAC84D /* XCRemoteSwiftPackageReference "Inject" */,
+				3407D0542B7C8B9900E9FF63 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3491BBA32B7BBA5E00FAC84D /* Products */;
 			projectDirPath = "";
@@ -629,6 +633,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3407D0542B7C8B9900E9FF63 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		3491BBD02B7BBB4400FAC84D /* XCRemoteSwiftPackageReference "Inject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
@@ -640,6 +652,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3407D0552B7C8B9900E9FF63 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3407D0542B7C8B9900E9FF63 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		3491BBD12B7BBB4500FAC84D /* Inject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3491BBD02B7BBB4400FAC84D /* XCRemoteSwiftPackageReference "Inject" */;

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages()
+    @State var messageText: String = ""
+    let openAIService = OpenAIService()
 
     var body: some View {
         VStack {
@@ -20,13 +22,14 @@ struct ContentView: View {
             }   
             }
             HStack {
-                TextField("Enter a message", text: $messageText)
-                .padding(12)
+                TextField("Enter a message", text: $messageText){
+
+                }
+                .padding()
                 .background(.gray.opacity(0.1))
                 .cornerRadius(12)
                 Button {
-                    chatMessages.append(ChatMessage(id: UUID().uuidString, content: messageText, dateCreated: Date(), sender: .me))
-                    messageText = ""
+                    sendMessage()
                 } label: {
                     Text("Send")
                     .foregroundColor(.white)
@@ -37,6 +40,9 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onAppear{
+            openAIService.sendMessage(message: "Generate a tagline for an ice cream shop.")
+        }
         .enableInjection()
     }
     func messageView(message: ChatMessage) -> some View {
@@ -53,6 +59,10 @@ struct ContentView: View {
                 Spacer()
             }
         }
+    }
+        func sendMessage() {
+            messageText = ""
+        print(messageText)
     }
 }
 
