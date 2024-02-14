@@ -14,6 +14,7 @@
 		3491BBB82B7BBA6000FAC84D /* Sonchv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491BBB72B7BBA6000FAC84D /* Sonchv2Tests.swift */; };
 		3491BBC22B7BBA6000FAC84D /* Sonchv2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491BBC12B7BBA6000FAC84D /* Sonchv2UITests.swift */; };
 		3491BBC42B7BBA6000FAC84D /* Sonchv2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491BBC32B7BBA6000FAC84D /* Sonchv2UITestsLaunchTests.swift */; };
+		3491BBD22B7BBB4500FAC84D /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 3491BBD12B7BBB4500FAC84D /* Inject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3491BBD22B7BBB4500FAC84D /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = Sonchv2;
+			packageProductDependencies = (
+				3491BBD12B7BBB4500FAC84D /* Inject */,
+			);
 			productName = Sonchv2;
 			productReference = 3491BBA22B7BBA5E00FAC84D /* Sonchv2.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 3491BB992B7BBA5E00FAC84D;
+			packageReferences = (
+				3491BBD02B7BBB4400FAC84D /* XCRemoteSwiftPackageReference "Inject" */,
+			);
 			productRefGroup = 3491BBA32B7BBA5E00FAC84D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -442,10 +450,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonch.Sonchv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -480,10 +489,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonch.Sonchv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
@@ -617,6 +627,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3491BBD02B7BBB4400FAC84D /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3491BBD12B7BBB4500FAC84D /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3491BBD02B7BBB4400FAC84D /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3491BB9A2B7BBA5E00FAC84D /* Project object */;
 }

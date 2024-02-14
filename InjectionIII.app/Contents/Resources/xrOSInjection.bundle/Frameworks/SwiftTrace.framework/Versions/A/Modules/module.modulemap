@@ -1,0 +1,11 @@
+framework module SwiftTrace {
+  umbrella header "SwiftTrace.h"
+  export *
+
+  module * { export * }
+}
+
+module SwiftTrace.Swift {
+  header "SwiftTrace-Swift.h"
+  requires objc
+}
